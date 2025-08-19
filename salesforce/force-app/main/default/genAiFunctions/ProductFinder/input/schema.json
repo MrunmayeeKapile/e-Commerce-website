@@ -1,0 +1,14 @@
+{
+  "required" : [ "Input:user_Query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:user_Query" : {
+      "title" : "user_Query",
+      "description" : "This is the user query ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

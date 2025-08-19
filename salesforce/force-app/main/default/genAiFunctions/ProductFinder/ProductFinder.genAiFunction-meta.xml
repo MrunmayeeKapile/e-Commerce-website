@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>this action is to fetch the detail of the product</description>
+    <invocationTarget>ProductFinder</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>ProductFinder</masterLabel>
+    <progressIndicatorMessage>loading...</progressIndicatorMessage>
+</GenAiFunction>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provide answers to general user queries</description>
+    <invocationTarget>Ecommerce_Knowledgebase</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Ecommerce Knowledgebase</masterLabel>
+    <progressIndicatorMessage>searching information..</progressIndicatorMessage>
+</GenAiFunction>

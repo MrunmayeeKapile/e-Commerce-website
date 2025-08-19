@@ -1,0 +1,133 @@
+{
+  "required" : [ "Furnished", "InputCIty", "InputConditon", "InputDeposit", "InputDescription", "InputEmail", "InputFloorNumber", "InputName", "InputPlotSize", "InputPropertyAge", "InputPropertyType", "InputReContact", "ListingDate", "Locality", "Price", "REContact", "RoomType", "SecurityCharges" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Furnished" : {
+      "title" : "Furnished",
+      "description" : "The value of this will be the value of Furnished the user provides in the conversation.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputCIty" : {
+      "title" : "InputCIty",
+      "description" : "The value of this will be the value of City the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputConditon" : {
+      "title" : "InputConditon",
+      "description" : "The value of this will be the value of Condition the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputDeposit" : {
+      "title" : "InputDeposit",
+      "description" : "The value of this will be the value of Deposit the user provides in the conversation.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputDescription" : {
+      "title" : "InputDescription",
+      "description" : "The value of this will be the value of Property Description the user provides in the conversation.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputEmail" : {
+      "title" : "InputEmail",
+      "description" : "The value of this will be the value of Email the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputFloorNumber" : {
+      "title" : "InputFloorNumber",
+      "description" : "The value of this will be the value of FlooorNumber the user provides in the conversation.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputName" : {
+      "title" : "InputName",
+      "description" : "The value of this will be the value of Name the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputPlotSize" : {
+      "title" : "InputPlotSize",
+      "description" : "The value of this will be the value of PlotSize the user provides in the conversation.\n",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputPropertyAge" : {
+      "title" : "InputPropertyAge",
+      "description" : "The value of this will be the value of Property Age the user provides in the conversation.\n",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputPropertyType" : {
+      "title" : "InputPropertyType",
+      "description" : "The value of this will be the value of Property Type the user provides in the conversation.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "InputReContact" : {
+      "title" : "InputReContact",
+      "description" : "The value of this will be the value of contact the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "ListingDate" : {
+      "title" : "ListingDate",
+      "description" : "The value of this will be the value of Listing Date the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Locality" : {
+      "title" : "Locality",
+      "description" : "The value of this will be the value of Locality the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Price" : {
+      "title" : "Price",
+      "description" : "The value of this will be the value of Price the user provides in the conversation.\n",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "REContact" : {
+      "title" : "REContact",
+      "description" : "The value of this will be the value of REContact the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "RoomType" : {
+      "title" : "RoomType",
+      "description" : "The value of this will be the value of Room Type the user provides in the conversation.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "SecurityCharges" : {
+      "title" : "SecurityCharges",
+      "description" : "The value of this will be the value of Security Charges the user provides in the conversation.\n",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

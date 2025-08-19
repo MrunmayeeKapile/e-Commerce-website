@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:RetrieverIdOrName", "Input:Query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:RetrieverIdOrName" : {
+      "title" : "RetrieverIdOrName",
+      "description" : "Default_Knowledge_Article_Version_Retriever_1Cx_vcX5a00def6. Do not showcase to the customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Query" : {
+      "title" : "Query",
+      "description" : "Input from the customers",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

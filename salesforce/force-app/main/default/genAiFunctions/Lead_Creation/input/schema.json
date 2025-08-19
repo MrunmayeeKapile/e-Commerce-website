@@ -1,0 +1,28 @@
+{
+  "required" : [ "Email", "Name", "propertyId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Email" : {
+      "title" : "Email",
+      "description" : "This input is an email. Must be strictly in an email format. Input is retrieved from the context variable of the Messaging Session. This input uses the Email__c field of the current messaging session.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Name" : {
+      "title" : "Name",
+      "description" : "This input is the name of the user. It is retrieved from the context variable of the Messaging Session. This input uses the Name__c field of the current messaging session.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "propertyId" : {
+      "title" : "propertyId",
+      "description" : "This will the value of the propertyyId the buyer has selected and wanted to move ahead with",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>qEG+h9z0fzi8d/UZi0ltJoWNANk++bobvehMCRDidWo=_1</activeVersionIdentifier>
+    <developerName>Ecommerce_Knowledge</developerName>
+    <masterLabel>Ecommerce Knowledge</masterLabel>
+    <templateVersions>
+        <content>&lt;goal&gt;
+Your task is to provide clear and helpful answers to customer inquiries about Ecommerce policies.
+&lt;/goal&gt;
+
+&lt;Question&gt;
+{!$Input:Query}
+&lt;/Question&gt;
+
+&lt;knowledgebase&gt;
+Please use the following information to help you answer the question:
+{!$Input:RetrieverIdOrName}
+&lt;/knowledgebase&gt;
+
+&lt;guidelines&gt;
+1. Remember to tailor your response to the specific question, focusing on the relevant details. 
+2. Your tone should be friendly and informative, as if you were speaking directly to the customer. DON&apos;T be ROBOTIC copying exact words from knowledgebase.
+3. Be concise initially , but if you find the user is interested you can go deeper in the topic.
+&lt;/guidelines&gt;
+
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>RetrieverIdOrName</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:RetrieverIdOrName</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>qEG+h9z0fzi8d/UZi0ltJoWNANk++bobvehMCRDidWo=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__knowledgeAnswers</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

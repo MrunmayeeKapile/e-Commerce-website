@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>jsonEnd</name>
+        <label>jsonEnd</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>]</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_the_prompt</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>jsonStart</name>
+        <label>jsonStart</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>[</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>loop_on_records</name>
+        <label>loop on records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>{</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;price&quot; : &quot;{!Loop_1.Price__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;color&quot; : &quot;{!Loop_1.color__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;categories&quot; : &quot;{!Loop_1.Categories__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;imageUrl&quot; : &quot;{!Loop_1.Image_Url__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue> &quot;occasion&quot; : &quot;{!Loop_1.Occasion__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;pattern&quot; : &quot;{!Loop_1.Pattern__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;sizes&quot; : &quot;{!Loop_1.Sizes__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;stock&quot; : &quot;{!Loop_1.Stock__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;subCategories&quot; : &quot;{!Loop_1.Sub_Categories__c}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;productName&quot; : &quot;{!Loop_1.Name}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;displayUrl&quot; : &quot;{!Loop_1.DisplayUrl}&quot;,</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&quot;Image&quot; : &quot;{!Loop_1.Image__c}&quot;</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OutputText</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>},</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_the_prompt</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Update the prompt</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>{!OutputText}
+</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Addition of image url in the loop</description>
+    <environments>Default</environments>
+    <interviewLabel>productFinder {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>productFinder</label>
+    <loops>
+        <name>Loop_1</name>
+        <label>Loop 1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Products</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>loop_on_records</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>jsonEnd</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>PromptFlow</processType>
+    <recordLookups>
+        <name>Get_Products</name>
+        <label>Get Products</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>jsonStart</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Product2</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Products</targetReference>
+        </connector>
+        <triggerType>Capability</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>OutputText</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

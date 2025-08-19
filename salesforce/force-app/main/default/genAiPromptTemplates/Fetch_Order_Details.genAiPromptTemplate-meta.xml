@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>qEG+h9z0fzi8d/UZi0ltJoWNANk++bobvehMCRDidWo=_2</activeVersionIdentifier>
+    <description>Tracks the orders</description>
+    <developerName>Fetch_Order_Details</developerName>
+    <masterLabel>Fetch Order Details</masterLabel>
+    <templateVersions>
+        <content>&lt;role&gt; Manages the complete order lifecycle — from processing and shipping to tracking and resolving delivery issues — to ensure timely, accurate, and customer-friendly fulfillment &lt;/role&gt; 
+
+&lt;knowledge&gt;
+{!$Flow:Fetch_Order_Details.Prompt}
+&lt;/knowledge&gt; 
+
+&lt;input&gt;
+{!$Input:Name}
+&lt;/input&gt;
+
+
+&lt;task&gt; 
+return the values present in the  &lt;knowledge&gt; in numbered format, Identify the useful content
+&lt;/task&gt; 
+
+
+&lt;guideline&gt; - Always base your answer solely on the order list in &lt;knowledge&gt;. 
+- Do not make assumptions or add order not in the list. 
+- Keep numbered list output valid and free from extra text. 
+- Use clear, buyer-friendly language if needed within the JSON fields. 
+&lt;/guideline&gt;
+</content>
+        <inputs>
+            <apiName>Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Name</masterLabel>
+            <referenceName>Input:Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Fetch_Order_Details</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Name</parameterName>
+                <valueExpression>{!$Input:Name}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Fetch_Order_Details</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>qEG+h9z0fzi8d/UZi0ltJoWNANk++bobvehMCRDidWo=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>&lt;role&gt; Manages the complete order lifecycle — from processing and shipping to tracking and resolving delivery issues — to ensure timely, accurate, and customer-friendly fulfillment &lt;/role&gt; 
+
+&lt;knowledge&gt;
+{!$Flow:Fetch_Order_Details.Prompt}
+&lt;/knowledge&gt; 
+
+&lt;input&gt;
+{!$Input:Name}
+&lt;/input&gt;
+
+
+&lt;task&gt; 
+Return the exact knowledge
+&lt;/task&gt; 
+
+
+&lt;guideline&gt;
+- Use clear, buyer-friendly language if needed within the JSON fields. 
+&lt;/guideline&gt;
+</content>
+        <inputs>
+            <apiName>Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Name</masterLabel>
+            <referenceName>Input:Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Fetch_Order_Details</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Name</parameterName>
+                <valueExpression>{!$Input:Name}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Fetch_Order_Details</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>qEG+h9z0fzi8d/UZi0ltJoWNANk++bobvehMCRDidWo=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

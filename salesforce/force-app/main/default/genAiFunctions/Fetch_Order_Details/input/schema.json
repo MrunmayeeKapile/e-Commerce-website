@@ -1,0 +1,14 @@
+{
+  "required" : [ "Input:Name" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Name" : {
+      "title" : "Name",
+      "description" : "It takes the order inputs and finds the orders with the order number",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,112 @@
+{
+  "required" : [ "Contact", "varCity", "varCondition", "varDeposit", "varFloorNumber", "varFurnished", "varListingDate", "varLocality", "varPlotSize", "varPrice", "varPropertyAge", "varPropertyDescription", "varPropertyType", "varRoomType", "varSecurityCharges" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Contact" : {
+      "title" : "Contact",
+      "description" : "The value of this will be the value of contact the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varCity" : {
+      "title" : "varCity",
+      "description" : "The value of this will be the value of City the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varCondition" : {
+      "title" : "varCondition",
+      "description" : "The value of this will be the value of Condition the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varDeposit" : {
+      "title" : "varDeposit",
+      "description" : "The value of this will be the value of Deposit the user provides in the conversation.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varFloorNumber" : {
+      "title" : "varFloorNumber",
+      "description" : "The value of this will be the value of FloorNumber the user provides in the conversation.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varFurnished" : {
+      "title" : "varFurnished",
+      "description" : "The value of this will be the value of Furnished the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varListingDate" : {
+      "title" : "varListingDate",
+      "description" : "The value of this will be the value of Listing Date the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varLocality" : {
+      "title" : "varLocality",
+      "description" : "The value of this will be the value of Locality the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varPlotSize" : {
+      "title" : "varPlotSize",
+      "description" : "The value of this will be the value of Plot Size the user provides in the conversation.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varPrice" : {
+      "title" : "varPrice",
+      "description" : "The value of this will be the value of Price the user provides in the conversation.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varPropertyAge" : {
+      "title" : "varPropertyAge",
+      "description" : "The value of this will be the value of Property Age the user provides in the conversation.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varPropertyDescription" : {
+      "title" : "varPropertyDescription",
+      "description" : "The value of this will be the value of PropertyDescription the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varPropertyType" : {
+      "title" : "varPropertyType",
+      "description" : "The value of this will be the value of PropertyType the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varRoomType" : {
+      "title" : "varRoomType",
+      "description" : "The value of this will be the value of RoomType the user provides in the conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varSecurityCharges" : {
+      "title" : "varSecurityCharges",
+      "description" : "The value of this will be the value of SecurityCharges the user provides in the conversation.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

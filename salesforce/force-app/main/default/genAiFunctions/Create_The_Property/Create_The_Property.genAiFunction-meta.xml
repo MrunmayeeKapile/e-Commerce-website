@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use this action when the conversation contains sufficient details to create a new Property record in Salesforce. Collect all available property-related fields from the seller such as property type, room type, condition, furnishing, status, city, locality, floor number, plot size, property age, listing date, price, deposit, security charges, availability, contact, owner, and id the user provides any other information fill it in property description. If some details are missing, proceed with creating the record using whatever information is available. Do not delay record creation while waiting for non-mandatory fields. Pass the collected values into the corresponding inputs. Return the Salesforce record ID after creation.</description>
+    <invocationTarget>Create_The_Property</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Create The Property</masterLabel>
+    <progressIndicatorMessage>Kindly Hold for a few seconds ... your property is about to list!!!!</progressIndicatorMessage>
+</GenAiFunction>

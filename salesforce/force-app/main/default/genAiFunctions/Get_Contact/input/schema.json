@@ -1,0 +1,14 @@
+{
+  "required" : [ "ContactEmail" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "ContactEmail" : {
+      "title" : "ContactEmail",
+      "description" : "take the input from user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
